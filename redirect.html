@@ -1,0 +1,50 @@
+<?php
+session_start();
+if (!isset($_SESSION['username']))
+{
+   header('Location: ./acesso_negado.html');
+   exit;
+}
+if ($_SESSION['username'] == 'leandro')
+{
+   header('Location: ./documentacao.php');
+   exit;
+}
+if (!isset($_SESSION['username']))
+{
+   $_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
+   header('Location: ');
+   exit;
+}
+if (isset($_SESSION['expires_by']))
+{
+   $expires_by = intval($_SESSION['expires_by']);
+   if (time() < $expires_by)
+   {
+      $_SESSION['expires_by'] = time() + intval($_SESSION['expires_timeout']);
+   }
+   else
+   {
+      unset($_SESSION['username']);
+      unset($_SESSION['expires_by']);
+      unset($_SESSION['expires_timeout']);
+      $_SESSION['referrer'] = $_SERVER['REQUEST_URI'];
+      header('Location: ');
+      exit;
+   }
+}
+?>
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 12 - http://www.wysiwygwebbuilder.com">
+<link href="css/Site_Download_parceiros.css" rel="stylesheet">
+<link href="css/redirect.css" rel="stylesheet">
+</head>
+<body>
+
+
+</body>
+</html>

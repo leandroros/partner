@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<gallery frameColor="0xFFFFFF" frameWidth="10" imagePadding="20" displayTime="4" enableRightClickOpen="true">
+   <image>
+      <url>images/Acesso remoto.jpg</url>
+      <caption>Acesso remoto</caption>
+      <width>1655</width>
+      <height>848</height>
+   </image>
+   <image>
+      <url>images/Alertas.jpg</url>
+      <caption>Alertas</caption>
+      <width>1533</width>
+      <height>856</height>
+   </image>
+   <image>
+      <url>images/configuracao.jpg</url>
+      <caption>configuracao</caption>
+      <width>1492</width>
+      <height>837</height>
+   </image>
+   <image>
+      <url>images/Dashboard.jpg</url>
+      <caption>Dashboard</caption>
+      <width>1681</width>
+      <height>878</height>
+   </image>
+   <image>
+      <url>images/Evidencia.jpg</url>
+      <caption>Evidencia</caption>
+      <width>1676</width>
+      <height>870</height>
+   </image>
+   <image>
+      <url>images/Pesquisa.jpg</url>
+      <caption>Pesquisa</caption>
+      <width>1627</width>
+      <height>863</height>
+   </image>
+</gallery>

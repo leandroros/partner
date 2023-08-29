@@ -1,0 +1,8 @@
+config.secret.inc.php
+.pytest_cache
+.vscode
+.history
+.venv
+.yml
+Dockerfile
+docker-compose.yml
