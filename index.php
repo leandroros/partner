@@ -36,12 +36,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['form_name']) && $_POST
       $_SESSION['fullname'] = $db_fullname;
       $_SESSION['expires_by'] = time() + $session_timeout;
       $_SESSION['expires_timeout'] = $session_timeout;
-      $rememberme = isset($_POST['rememberme']) ? true : false;
-      if ($rememberme)
-      {
-         setcookie('username', $db_username, time() + 3600*24*30);
-         setcookie('password', $_POST['password'], time() + 3600*24*30);
-      }
       header('Location: '.$success_page);
       exit;
    }
@@ -71,25 +65,22 @@ $password = isset($_COOKIE['password']) ? $_COOKIE['password'] : '';
 <input type="hidden" name="form_name" value="loginform">
 <table id="Login1">
 <tr>
-   <td class="header">Log In</td>
+   <td class="header">Logar-se</td>
 </tr>
 <tr>
-   <td class="label"><label for="username">User Name</label></td>
+   <td class="label"><label for="username">Usuario</label></td>
 </tr>
 <tr>
    <td class="row"><input class="input" name="username" type="text" id="username" value="<?php echo $username; ?>"></td>
 </tr>
 <tr>
-   <td class="label"><label for="password">Password</label></td>
+   <td class="label"><label for="password">Senha</label></td>
 </tr>
 <tr>
    <td class="row"><input class="input" name="password" type="password" id="password" value="<?php echo $password; ?>"></td>
 </tr>
 <tr>
-   <td class="row"><input id="rememberme" type="checkbox" name="rememberme"><label for="rememberme">Remember me</label></td>
-</tr>
-<tr>
-   <td style="text-align:center;vertical-align:bottom"><input class="button" type="submit" name="login" value="Log In" id="login"></td>
+   <td style="text-align:center;vertical-align:bottom"><input class="button" type="submit" name="login" value="Login" id="login"></td>
 </tr>
 </table>
 </form>
