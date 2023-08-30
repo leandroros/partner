@@ -3,5 +3,6 @@ FROM php:apache
 
 # Copia los archivos de tu proyecto al directorio de trabajo en el contenedor
 COPY . /var/www/html/
+RUN apt -y update && apt -y install nano
 RUN chmod 777 /var/www/html/uploads
-EXPOSE 443
+EXPOSE 443 80

@@ -8,5 +8,5 @@ services:
     image: leleoros/partner
     container_name: php
     ports:
-        - 8087:443
+        - 8087:80
    
